@@ -6,4 +6,4 @@
  * Time: 19:34
  */ 
  
- coucou
+ echo 'coucou';
