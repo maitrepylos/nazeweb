@@ -26,54 +26,50 @@ class PersonnesController extends AppController{
 
 
 
-        $personne = $this->Personnes->newEntity($this->request->data);
+        $evenement = $this->Evenement->newEntity($this->request->data);
 
-        $localite = $this->Personnes->Localites->find('list', ['idField' => 'id_localite', 'valueField' => 't_nom'])->toArray();
+        $localite = $this->Evenement->Localites->find('list', ['idField' => 'id_localite', 'valueField' => 't_nom'])->toArray();
 
-
-        $respo = $this->Personnes->find('list', ['idField' => 'id_personne', 'valueField' => 't_nom'])->toArray();
 
 
         if ($this->request->is('post')){
-            $personne->id_personne_responsable = serialize($personne->id_personne_responsable);
-            var_dump($personne);
-//            if ($this->Personnes->save($personne)){
-//                $this->Flash->set('Votre évenement a été sauvegrardé.', ['element'=>'success']);
-//                return $this->redirect(['action'=> 'view', $personne->id_personne]);
-//            }
-//            $this->Flash->error(__('Impossible d ajouter votre évenement.'));
+            if ($this->Evenement->save($evenement)){
+                $this->Flash->set('Votre évenement a été sauvegrardé.', ['element'=>'success']);
+                return $this->redirect(['action'=> 'view', $evenement->id_evenement]);
+            }
+            $this->Flash->error(__('Impossible d ajouter votre évenement.'));
         }
-        $this->set(compact('personne', 'localite', 'respo'));
+        $this->set(compact('evenement', 'localite'));
 
     }
 
-//    public function view($id = null) {
-//        if (!$id) {
-//            throw new NotFoundException(__('Invalid article'));
-//        }
-//        $evenement = $this->Evenement->get($id, [
-//            'contain' => ['localites']
-//        ]);
-//        $this->set(compact('evenement'));
-//    }
-//
-//    public function edit($id = null) {
-//
-//
-//        if (!$id) {
-//            throw new NotFoundException(__('Invalid article'));
-//        }
-//
-//        $evenement = $this->Evenement->get($id);
-//        if ($this->request->is(['post', 'put'])) {
-//            $this->Evenement->patchEntity($evenement, $this->request->data);
-//            if ($this->Evenement->save($evenement)) {
-//                $this->Flash->success(__('Votre evenement a été mis à jour.'));
-//                return $this->redirect(['action' => 'view', $evenement->id_evenement]);
-//            }
-//            $this->Flash->error(__('Impossible de mettre à jour votre evenement.'));
-//        }
-//
-//        $this->set('evenement', $evenement);
-//    }
+    public function view($id = null) {
+        if (!$id) {
+            throw new NotFoundException(__('Invalid article'));
+        }
+        $evenement = $this->Evenement->get($id, [
+            'contain' => ['localites']
+        ]);
+        $this->set(compact('evenement'));
+    }
+
+    public function edit($id = null) {
+
+
+        if (!$id) {
+            throw new NotFoundException(__('Invalid article'));
+        }
+
+        $evenement = $this->Evenement->get($id);
+        if ($this->request->is(['post', 'put'])) {
+            $this->Evenement->patchEntity($evenement, $this->request->data);
+            if ($this->Evenement->save($evenement)) {
+                $this->Flash->success(__('Votre evenement a été mis à jour.'));
+                return $this->redirect(['action' => 'view', $evenement->id_evenement]);
+            }
+            $this->Flash->error(__('Impossible de mettre à jour votre evenement.'));
+        }
+
+        $this->set('evenement', $evenement);
+    }
 } 

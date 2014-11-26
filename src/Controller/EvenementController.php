@@ -7,7 +7,6 @@
  */
 
 namespace App\Controller;
-
 use Cake\ORM\TableRegistry;
 
 class EvenementController extends AppController {
@@ -72,21 +71,22 @@ class EvenementController extends AppController {
 
         $this->set('evenement', $evenement);
     }
-
-
     public function delete($id){
         $this->request->allowMethod(['post', 'delete']);
 
-        $evenement  = $this->Evenemet->get($id);
+        $evenement = $this->Evenement->get($id);
         if ($this->Evenement->delete($evenement)) {
-            $this->Flash->success(__('L\'evenement avec l\'id: 0 a été supprimé.', h($id)));
+            $this->Flash->success(__('L\'evenement avec l\'id: {0} a été supprimé.', h($id)));
             return $this->redirect(['action' => 'index']);
         }
+
+
+
+
+
     }
-
-    public function viewall(){
-
-
+	
+	  public function viewall(){
 
         $evenement = TableRegistry::get('Evenement');
         $row = $evenement->find('all')->contain(['localites']);
@@ -94,5 +94,4 @@ class EvenementController extends AppController {
         $this->set($data);
 
     }
-
 } 

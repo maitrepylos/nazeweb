@@ -27,7 +27,7 @@ Router::scope('/', function ($routes) {
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, src/Template/Pages/home.ctp)...
  */
-    $routes->connect('/', ['controller' => 'App', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'Evenement', 'action' => 'viewall']);//Page d'accueil
 
 /**
  * ...and connect the rest of 'Pages' controller's URLs.

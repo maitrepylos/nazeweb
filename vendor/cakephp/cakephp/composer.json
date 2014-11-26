@@ -25,7 +25,8 @@
 		"nesbot/Carbon": "1.8.*",
 		"ircmaxell/password-compat": "1.0.*",
 		"aura/intl": "1.1.*",
-		"psr/log": "1.0"
+		"psr/log": "1.0",
+        "phpunit/phpunit": "*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "*",

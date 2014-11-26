@@ -1,4 +1,4 @@
-<style>
+﻿<!--<style>
 
     p{
     color: cornflowerblue;
@@ -15,32 +15,35 @@
 
     }
 
-</style>
-<h1><?= h($evenement->t_nom) ?></h1>
-<h3>Rue: </h3>
-<p><?= h($evenement->t_rue) ?></p>
-<h3>Numéro: </h3>
-<p><?= h($evenement->t_numero) ?></p>
-<h3>Localitée: </h3>
-<p><?= h($evenement->localite['t_nom']) ?></p>
-<h3>Date de début: </h3>
-<p><?= h($evenement->d_date_debut) ?></p>
-<h3>Date de fin: </h3>
-<p><?= h($evenement->d_date_fin) ?></p>
-<h3>Heure de début: </h3>
-<p><?= h($evenement->d_heure_debut) ?></p>
-<h3>Heure de fin: </h3>
-<p><?= h($evenement->d_heure_fin) ?></p>
-<h3>Decription: </h3>
-<p><?= h($evenement->t_description) ?></p>
+</style>-->
+<section>
+    <div class="row moncontenaire">
+        <div class="subcontenaire">
 
-<?= $this->Form->postLink(
-    'Supprimer',
-    ['action' => 'delete', $evenement->id_evenement],
-    ['confirm' => 'Etes vous sur?'])
-?>
-<br><br>
-<?= $this->Html->link('Modifider', ['action' => 'edit', $evenement->id_evenement]) ?>
+            <h1><?= h($evenement->t_nom) ?></h1>
+            <h3>Rue: </h3>
+            <p><?= h($evenement->t_rue) ?></p>
+            <h3>Numéro: </h3>
+            <p><?= h($evenement->t_numero) ?></p>
+            <h3>Localitée: </h3>
+            <p><?= h($evenement->localite['t_nom']) ?></p>
+            <h3>Date de début: </h3>
+            <p><?= h($evenement->d_date_debut) ?></p>
+            <h3>Date de fin: </h3>
+            <p><?= h($evenement->d_date_fin) ?></p>
+            <h3>Heure de début: </h3>
+            <p><?= h($evenement->d_heure_debut) ?></p>
+            <h3>Heure de fin: </h3>
+            <p><?= h($evenement->d_heure_fin) ?></p>
+            <h3>Decription: </h3>
+            <p><?= h($evenement->t_description) ?></p>
+
+            <?= $this->Form->postlink('Supprimer',['action' => 'delete', $evenement->id_evenement],['confirm' => 'Etes vous sur?','class' => ['button_hover','button']])?>
+            <?= $this->Html->link('Modifier' ,['action' => 'edit', $evenement->id_evenement], ['class' => ['button_hover','button']]) ?><br /><br />
+
+        </div>
+    </div>
+</section>
 
 
 

@@ -202,15 +202,23 @@ $config = [
  * to your application's datastores.
  */
 	'Datasources' => [
+        /*'test' => [
+            'datasource' => 'Cake\Database\Driver\Mysql',
+            'persistent' => false,
+            'host' => 'dbhost',
+            'username' => 'dblogin',
+            'password' => 'dbpassword',
+            'database' => 'test_database'
+        ],*/
 		'default' => [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => '192.168.3.211',
+            'host' => 'localhost',
             'login' => 'root',
             'password' => '',
             'port' => '',
-            'database' => 'app_lagaillarde',
+            'database' => 'nazeweb',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
@@ -233,6 +241,7 @@ $config = [
 			* which is the recommended value in production environments
 			*/
 			//'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+
 		],
 
 		/**

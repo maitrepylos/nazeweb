@@ -1,5 +1,4 @@
-
-<style>
+﻿<style>
     label{
         color: cornflowerblue;
     }
@@ -13,7 +12,7 @@
     }
 </style>
 <?php
-echo '<h1>Evenement</h1>';
+echo '<h1>Bienvenue sur la page des évenements !</h1>';
 
 ?>
 <?= $this->Html->link('Ajouté un évenement', ['action' => '../evenement/add']) ?>

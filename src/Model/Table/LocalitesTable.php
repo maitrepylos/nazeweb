@@ -20,17 +20,7 @@ class LocalitesTable extends Table{
             'dependent' => true
 
         ]);
-
-        $this->table('localites');
-        $this->primaryKey('id_localite');
-        $this->hasMany('personnes', [
-            'foreignKey' => 'id_localite',
-            'dependent' => true
-
-        ]);
     }
-
-
 
 }
 

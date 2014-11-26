@@ -26,34 +26,50 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	</title>
 	<?= $this->Html->meta('icon') ?>
 
-	<?= $this->Html->css('base.css') ?>
-	<?= $this->Html->css('cake.css') ?>
+	<?= $this->Html->css('bootstrap.css') ?>
+	<?= $this->Html->css('bootstrap-theme.css') ?>
+   <!-- <link href="css/bootstrap.css.map" rel="stylesheet">-->
+    <?= $this->Html->css('main.css') ?>
 
 	<?= $this->fetch('meta') ?>
 	<?= $this->fetch('css') ?>
 	<?= $this->fetch('script') ?>
+
+    <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
-	<header>
-		<div class="header-title">
-			<span><?= $this->fetch('title') ?></span>
-		</div>
-		<div class="header-help">
-			<span><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></span>
-			<span><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></span>
-		</div>
-	</header>
-	<div id="container">
-		
-		<div id="content">
-			<?= $this->Flash->render() ?>
 
-			<div class="row">
-				<?= $this->fetch('content') ?>
-			</div>
-		</div>
-		<footer>
-		</footer>
-	</div>
+<div class="wrapper">
+
+    <div class="menu-wrap">
+        <nav class="menu-top">
+            <img src="img/background.jpg">
+            <span>Administrateur</span>
+        </nav>
+        <nav class="menu-side">
+            <a href="#">Profil</a>
+            <?= $this->Html->link('Ajouté un évenement', ['action' => '../evenement/add']) ?>
+            <a href="#">Proposer à un covoiturage</a>
+            <a href="#">S'inscrire à un covoiturage</a>
+        </nav>
+    </div>
+    <button class="menu-button" id="open-button">Menu</button>
+    <div class="content-wrap">
+        <div class="content">
+            <div id="pre-header"></div>
+            <div id="header">
+                <img src="img/logo.png">
+                <h1 class="pull-right" id="title">Module de covoiturage</h1>
+            </div>
+
+            <?= $this->fetch('content'); ?>
+        </div>
+    </div>
+</div>
+
+    <?= $this->Html->script('jquery.min.js') ?>
+    <?= $this->Html->script('bootstrap.min.js') ?>
+    <?= $this->Html->script('main.js') ?>
 </body>
 </html>
