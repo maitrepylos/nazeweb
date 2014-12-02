@@ -28,6 +28,9 @@ class PersonnesTable extends Table {
 
         ]);
 
+      $this->belongsToMany('evenement', [
+        'through' => 'Covoiturage',
+      ]);
 
 
 
