@@ -8,7 +8,6 @@
 
 namespace App\Controller;
 
-
 use Cake\ORM\TableRegistry;
 
 class CovoiturageController extends AppController
@@ -16,9 +15,6 @@ class CovoiturageController extends AppController
 
   public function index()
   {
-    $covoiturage = $this->Covoiturage->find('all');
-    $data = ['covoiturage' => $covoiturage];
-    $this->set($data);
 
   }
 
@@ -54,6 +50,16 @@ class CovoiturageController extends AppController
     $row = $covoiturage->find('all');
     $data = ['covoiturage'=>$row];
     $this->set($data);
+
+  }
+
+  public function viewallvv(){
+    $covoiturage = TableRegistry::get('Covoiturage');
+    $query=$covoiturage->find();
+    $query->select(['id_personne', 'id_evenement', 'n_nbre_places']);
+    
+    debug($query);
+
 
   }
 

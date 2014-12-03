@@ -26,7 +26,7 @@
         $this->Form->postLink(
           'Delete',
           ['action' => 'delete'],
-          ['confirm' => 'Êtes vous sur?'])
+          ['confirm' => 'Êtes-vous sûr?'])
         ?>
         <!--DELETE FROM `app_lagaillarde`.`personnes_offre_covoiturage` WHERE `personnes_offre_covoiturage`.`id_personne` = 45 AND `personnes_offre_covoiturage`.`id_evenement` = 2-->
         <?= $this->Html->link('Edit', ['action' => 'edit']) ?>

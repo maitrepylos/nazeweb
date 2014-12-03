@@ -14,7 +14,7 @@ class PersonnesController extends AppController{
 
     public function index(){
 
-        $personne = $this->Personnes->find('all'); // récupere toutes les données de la table
+        $personne = $this->Personnes->find('all'); // récupère toutes les données de la table
         $data = ['personne'=>$personne];
         $this->set($data);
 
@@ -38,10 +38,10 @@ class PersonnesController extends AppController{
             $personne->id_personne_responsable = serialize($personne->id_personne_responsable);
             var_dump($personne);
 //            if ($this->Personnes->save($personne)){
-//                $this->Flash->set('Votre évenement a été sauvegrardé.', ['element'=>'success']);
+//                $this->Flash->set('Votre événement a été sauvegardé.', ['element'=>'success']);
 //                return $this->redirect(['action'=> 'view', $personne->id_personne]);
 //            }
-//            $this->Flash->error(__('Impossible d ajouter votre évenement.'));
+//            $this->Flash->error(__('Impossible d'ajouter votre événement.'));
         }
         $this->set(compact('personne', 'localite', 'respo'));
 
@@ -68,10 +68,10 @@ class PersonnesController extends AppController{
 //        if ($this->request->is(['post', 'put'])) {
 //            $this->Evenement->patchEntity($evenement, $this->request->data);
 //            if ($this->Evenement->save($evenement)) {
-//                $this->Flash->success(__('Votre evenement a été mis à jour.'));
+//                $this->Flash->success(__('Votre événement a été mis à jour.'));
 //                return $this->redirect(['action' => 'view', $evenement->id_evenement]);
 //            }
-//            $this->Flash->error(__('Impossible de mettre à jour votre evenement.'));
+//            $this->Flash->error(__('Impossible de mettre à jour votre événement.'));
 //        }
 //
 //        $this->set('evenement', $evenement);

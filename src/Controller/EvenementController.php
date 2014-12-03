@@ -34,10 +34,10 @@ class EvenementController extends AppController {
 
         if ($this->request->is('post')){
             if ($this->Evenement->save($evenement)){
-                $this->Flash->set('Votre évenement a été sauvegrardé.', ['element'=>'success']);
+                $this->Flash->set('Votre événement a été sauvegardé.', ['element'=>'success']);
                 return $this->redirect(['action'=> 'view', $evenement->id_evenement]);
             }
-            $this->Flash->error(__('Impossible d ajouter votre évenement.'));
+            $this->Flash->error(__('Impossible d\'ajouter votre événement.'));
         }
        $this->set(compact('evenement', 'localite'));
 
@@ -64,10 +64,10 @@ class EvenementController extends AppController {
         if ($this->request->is(['post', 'put'])) {
             $this->Evenement->patchEntity($evenement, $this->request->data);
             if ($this->Evenement->save($evenement)) {
-                $this->Flash->success(__('Votre evenement a été mis à jour.'));
+                $this->Flash->success(__('Votre événement a été mis à jour.'));
                 return $this->redirect(['action' => 'view', $evenement->id_evenement]);
             }
-            $this->Flash->error(__('Impossible de mettre à jour votre evenement.'));
+            $this->Flash->error(__('Impossible de mettre à jour votre événement.'));
         }
 
         $this->set('evenement', $evenement);
@@ -79,7 +79,7 @@ class EvenementController extends AppController {
 
         $evenement  = $this->Evenemet->get($id);
         if ($this->Evenement->delete($evenement)) {
-            $this->Flash->success(__('L\'evenement avec l\'id: 0 a été supprimé.', h($id)));
+            $this->Flash->success(__('L\'événement avec l\'id: 0 a été supprimé.', h($id)));
             return $this->redirect(['action' => 'index']);
         }
     }

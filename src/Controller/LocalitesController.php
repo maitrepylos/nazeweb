@@ -13,7 +13,7 @@ class LocalitesController extends AppController{
 
     public function index(){
 
-        $localites = $this->Evenement->find('localites'); // récupere toutes les données de la table
+        $localites = $this->Evenement->find('localites'); // récupère toutes les données de la table
         $data = ['localites'=>$localites];
         $this->set($data);
     }

@@ -942,3 +942,31 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 85
 
 
 
+2014-12-03 17:09:57 Debug: Notice (8): Undefined variable: covoiturage in [C:\wamp\www\nazeweb\src\Template\Covoiturage\viewallvv.ctp, line 12]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 135
+include - APP/Template\Covoiturage\viewallvv.ctp, line 12
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 751
+Cake\View\View::_render() - CORE\src\View\View.php, line 712
+Cake\View\View::render() - CORE\src\View\View.php, line 432
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 590
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 117
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 85
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2014-12-03 17:16:01 Debug: Notice (8): Undefined variable: covoiturage in [C:\wamp\www\nazeweb\src\Template\Covoiturage\viewallvv.ctp, line 12]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 135
+include - APP/Template\Covoiturage\viewallvv.ctp, line 12
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 751
+Cake\View\View::_render() - CORE\src\View\View.php, line 712
+Cake\View\View::render() - CORE\src\View\View.php, line 432
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 590
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 117
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 85
+[main] - ROOT\webroot\index.php, line 37
+
+
+

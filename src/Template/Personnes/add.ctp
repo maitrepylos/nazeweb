@@ -35,7 +35,7 @@ echo $this->Form->input('id_personne_responsable', ['label'=> 'Personne responsa
 
 
 
-echo $this->Form->submit (__("Ajouter une nouvel personne"));
+echo $this->Form->submit (__("Ajouter une nouvelle personne"));
 
 
 echo $this->Form->end();

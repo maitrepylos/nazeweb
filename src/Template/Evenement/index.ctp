@@ -16,4 +16,4 @@
 echo '<h1>Evenement</h1>';
 
 ?>
-<?= $this->Html->link('Ajouté un évenement', ['action' => '../evenement/add']) ?>
+<?= $this->Html->link('Ajouter un événement', ['action' => '../evenement/add']) ?>

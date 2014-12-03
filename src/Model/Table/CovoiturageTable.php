@@ -12,8 +12,7 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 
-class CovoiturageTable extends Table
-{
+class CovoiturageTable extends Table{
 
   public function initialize(array $config)
   {

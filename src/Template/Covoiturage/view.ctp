@@ -37,7 +37,7 @@
 <?= $this->Form->postLink(
     'Supprimer',
     ['action' => 'delete', $evenement->id_evenement],
-    ['confirm' => 'Êtes vous sur?'])
+    ['confirm' => 'Êtes-vous sûr?'])
 ?>
 <br><br>
 <?= $this->Html->link('Modifier', ['action' => 'edit', $evenement->id_evenement]) ?>
