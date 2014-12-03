@@ -207,6 +207,7 @@ $config = [
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
             'host' => '192.168.3.211',
+            //'host' => '192.168.1.2',
             'login' => 'root',
             'password' => '',
             'port' => '',

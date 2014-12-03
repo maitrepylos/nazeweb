@@ -14,15 +14,16 @@ class EvenementTable extends Table {
         $this->table('evenement');
         $this->primaryKey('id_evenement');
 
-
-
-
         $this->belongsTo('localites', [
             'foreignKey' => 'localites_id_localite',
             'dependent' => true
 
         ]);
 
+      $this->belongsToMany('personnes', [
+        'through' => 'Covoiturage',
+
+      ]);
 
     }
 
