@@ -9,7 +9,6 @@
 
 namespace App\Model\Table;
 
-use Cake\Datasource\ConnectionManager;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
@@ -34,22 +33,9 @@ class PersonnesTable extends Table {
       ]);
 
 
-    }
-
-    public static function getNomPrenom(){
-    $tab = array();
-     $pdo = ConnectionManager::get('default');
-      $sql = 'SELECT t_nom, t_prenom, id_personne FROM personnes';
-      $r = $pdo->prepare($sql);
-      $r->execute();
-      $data = $r->fetchAll(\PDO::FETCH_ASSOC);
-
-      foreach($data as $value){
-        $tab[$value['id_personne']] = $value['t_nom'].' '.$value['t_prenom'];
-      }
-      return $tab;
 
     }
+
 
 
 //    public function validationDefault(Validator $validator) {
