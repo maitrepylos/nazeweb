@@ -17,24 +17,15 @@ class EvenementController extends AppController {
         $evenement = $this->Evenement->find('all')->contain(['localites']);; // récupere toutes les données de la table
         $data = ['evenement'=>$evenement];
         $this->set($data);
-
-
     }
 
 
     public function  add(){
-
-
-
         $evenement = $this->Evenement->newEntity($this->request->data);
-
         $localite = $this->Evenement->Localites->find('list', ['idField' => 'id_localite', 'valueField' => 't_nom'])->toArray();
-
-
-
         if ($this->request->is('post')){
             if ($this->Evenement->save($evenement)){
-                $this->Flash->set('Votre événement a été sauvegardé.', ['element'=>'success']);
+                $this->Flash->set('Votre évènement a été sauvegardé.', ['element'=>'success']);
                 return $this->redirect(['action'=> 'view', $evenement->id_evenement]);
             }
             $this->Flash->error(__('Impossible d\'ajouter votre événement.'));
@@ -77,7 +68,7 @@ class EvenementController extends AppController {
     public function delete($id){
         $this->request->allowMethod(['post', 'delete']);
 
-        $evenement  = $this->Evenemet->get($id);
+        $evenement  = $this->Evenement->get($id);
         if ($this->Evenement->delete($evenement)) {
             $this->Flash->success(__('L\'événement avec l\'id: 0 a été supprimé.', h($id)));
             return $this->redirect(['action' => 'index']);
@@ -86,9 +77,7 @@ class EvenementController extends AppController {
 
     public function viewall(){
 
-
-
-        $evenement = TableRegistry::get('Evenement');
+       $evenement = TableRegistry::get('Evenement');
         $row = $evenement->find('all')->contain(['localites']);
         $data = ['evenement'=>$row];
         $this->set($data);

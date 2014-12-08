@@ -1,4 +1,3 @@
-
 <style>
     label{
         color: GrayText;
@@ -14,21 +13,20 @@
 
     }
 </style>
+
 <?php
-echo '<h1>Evenement - Modification</h1>';
-echo $this->Form->create($evenement);
-echo $this->Form->input ('t_nom', ['label'=> 'Nom: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->input ('t_rue', ['label'=> 'Rue: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->input ('t_numero', ['label'=> 'Numéro: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->input ('d_date_debut', ['label'=> 'Date début: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->input ('d_heure_debut', ['label'=> 'Heure début: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->input ('d_date_fin', ['label'=> 'Date fin: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->input ('d_heure_fin', ['label'=> 'Heure fin: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->input ('t_description', ['label'=> 'Description: ', 'style'=>'color:cornflowerblue;']);
-echo $this->Form->submit (__("Appliquer la modification"));
-
-
+echo '<h1>Covoiturage - Modification</h1>';
+//debug($offre_covoiturage);
+echo $this->Form->create($covoiturage);
+echo $this->Form->label('Evenement');
+echo $this->Form->select('id_evenement', $evenements, ['default'=>$offre_covoiturage[0]['id_evenement']]);
+echo $this->Form->label('Conducteur : ');
+echo $this->Form->select('id_personne', $personnes, ['default' => $offre_covoiturage[0]['id_personne']]);
+echo $this->Form->input('d_date_depart', ['type' => 'date' , 'label' => 'Date prévue pour le covoiturage: ', 'default' => $offre_covoiturage[0]['date_depart'], 'style' => 'color:cornflowerblue;']);
+echo $this->Form->input('d_heure_depart', ['label' => 'Heure du covoiturage: ', 'default' => $offre_covoiturage[0]['heure_depart'], 'style' => 'color:cornflowerblue;']);
+echo $this->Form->input('n_nbre_places', ['label' => 'Nombre de places: ', 'default' => $offre_covoiturage[0]['nbre_places'], 'style' => 'color:cornflowerblue;']);
+echo $this->Form->input('t_commentaire', ['label' => 'Commentaire: ', 'default' => $offre_covoiturage[0]['commentaire'], 'style' => 'color:cornflowerblue;']);
+echo $this->Form->submit(__("Appliquer la modification"));
 echo $this->Form->end();
-
 ?>
 
