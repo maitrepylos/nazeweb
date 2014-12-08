@@ -170,8 +170,7 @@ section {
 
 .event {
     position: relative;
-	
-    height: 250px;
+	height: 250px;
     margin: 15px 0;
     padding: 15px;
 	background-color:white;
@@ -224,14 +223,13 @@ cursor:pointer;
 
 #submenu{
 	width:244px;
-	margin: 0 auto;
 	margin-top: 50px;
 }
 
 #submenu a {
     display: block;
-    height: 60px;
-    line-height: 60px;
+    height: 35px;
+    line-height: 35px;
     border-top: 1px solid #103343;
     color: #fff;
     font-weight: bolder;
@@ -254,11 +252,21 @@ cursor:pointer;
     top: -5px;
 }
 .addevent {
+    padding-top: 45px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    background: #fff url(../img/iconeplus1.png) no-repeat center center;
     font-family: 'Open sans', sans-serif;
     color: #202020;
 }
+
+.addevent:hover {
+    text-decoration: none;
+}
+
 .event h2{
-	text-transform:uppercase;
+    text-transform:uppercase;
 	margin-bottom:50px;
 }
 @media screen and (max-width: 393px) {
