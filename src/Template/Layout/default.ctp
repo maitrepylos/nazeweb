@@ -29,7 +29,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<?= $this->Html->css('bootstrap.css') ?>
 	<?= $this->Html->css('bootstrap-theme.css') ?>
    <!-- <link href="css/bootstrap.css.map" rel="stylesheet">-->
-    <?= $this->Html->css('main1.css') ?>
+    <?= $this->Html->css('main.css') ?>
 
 	<?= $this->fetch('meta') ?>
 	<?= $this->fetch('css') ?>
@@ -48,7 +48,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <span>Administrateur</span>
         </nav>
         <nav class="menu-side">
-            <a href="#">Profil</a>
+            <a href="#">Ajouter un utilisateur</a>
             <?= $this->Html->link('Ajouter un évenement', ['action' => '../evenement/add']) ?>
         </nav>
     </div>
