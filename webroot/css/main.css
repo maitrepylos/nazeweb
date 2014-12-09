@@ -21,6 +21,10 @@ h2 {
     margin-top: 45px;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 #pre-header {
 	background-color: #1C1C1C;
 	height: 30px;
@@ -223,7 +227,7 @@ cursor:pointer;
 
 #submenu{
 	width:244px;
-	margin-top: 50px;
+	margin-top: 25px;
 }
 
 #submenu a {
@@ -256,13 +260,9 @@ cursor:pointer;
     font-size: 18px;
     text-transform: uppercase;
     display: block;
-    background: #fff url(../img/iconeplus1.png) no-repeat center center;
+    background: #fff url(../img/iconeplus.png) no-repeat center center;
     font-family: 'Open sans', sans-serif;
     color: #202020;
-}
-
-.addevent:hover {
-    text-decoration: none;
 }
 
 .event h2{
