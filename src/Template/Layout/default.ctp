@@ -48,7 +48,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <span>Administrateur</span>
         </nav>
         <nav class="menu-side">
-            <a href="#">Profil</a>
+            <a href="#">Ajouter un utilisateur</a>
             <?= $this->Html->link('Ajouter un évenement', ['action' => '../evenement/add']) ?>
         </nav>
     </div>
